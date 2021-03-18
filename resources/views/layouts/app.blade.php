@@ -23,14 +23,28 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-light bg-dark">
+        <!--<nav class="navbar navbar-light bg-dark">
             <div class="container">
             <!--<div class="container-fluid">-->
-      <a class="navbar-brand" href="{{route('posts.index')}}" style="color:white">All Posts</a>
+     <!-- <a class="navbar-brand" href="{{route('posts.index')}}" style="color:white">All Posts</a>
     <!--</div>-->
                 <!--<a class="navbar-brand" href="{{ url('/posts') }}">
                     {{ config('app.name', 'Home') }}
-                </a>-->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar 
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>-->
+
+
+                    <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{route('posts.index')}}" style="color:white">All Posts</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,6 +54,9 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -90,3 +107,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+    
