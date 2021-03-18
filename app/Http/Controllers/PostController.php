@@ -6,9 +6,13 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Post;
 use App\Models\User;
+
 use App\Http\Requests\StorePostRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use Cviebrock\EloquentSluggable\Services\SlugService;
+
 class PostController extends Controller
 {
     /*
@@ -53,10 +57,10 @@ class PostController extends Controller
     public function store(StorePostRequest $myRequestObject)
     {
         $data = $myRequestObject->all();
-        
         Post::create($data);
-
-        
+        $post = new Post();
+       // $post->title = $myRequestObject->title;
+        $post->slug = SlugService::createSlug(Post::class, 'slug', $myRequestObject->title);
         return redirect()->route('posts.index');
     }
     public  function edit(Post $post){
